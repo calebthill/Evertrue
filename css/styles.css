@@ -1,0 +1,111 @@
+html, body, div, span, img, p, table, tr, td {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: arial, sans-serif;
+}
+
+html, body, #content {
+  height: 100%;
+}
+
+.container {
+  display: block;
+  height: 100%;
+}
+
+.left-container {
+  width: 25%;
+  height: 100%;
+  background-color: #E6E6E6;
+  color: black;
+  display: inline-block;
+  float: left;
+}
+
+.left-container-content {
+  height: 85%;
+  width: 90%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #EBECED;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.left-container-header {
+  height: 45px;
+  background-color: #6B909A;
+  color: white;
+}
+
+.left-container-header-text {
+  line-height: 45px;
+  margin-left: 17px;
+  font-size: 16px;
+}
+
+.left-container-content-tab {
+  height: 40px;
+  border-bottom: 1px solid #EBECED;
+}
+
+.left-container-content-tab-text {
+  line-height: 40px;
+  color: #87CDE1;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 17px;
+}
+
+.left-container-content-tab-expanded {
+  margin-top: 20px;
+}
+
+.left-container-content-tab-text-expanded {
+  font-size: 14px;
+  margin-left: 17px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #4A4B48;
+}
+
+.left-container-content-tab-expanded-tab {
+  height: 30px;
+}
+
+.expanded-tab-text {
+  line-height: 30px;
+  color: #A9B1AF;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 34px;
+}
+
+.left-container-footer {
+  height: 45px;
+  width: 90%;
+  border-radius: 6px;
+  background-color: #8AC1B3;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.left-container-footer-text {
+  line-height: 45px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.right-container {
+  width: 75%;
+  height: 100%;
+  background-color: #F5F5F5;
+  display: inline-block;
+  float: right;
+}
+
