@@ -14,6 +14,8 @@ html, body, #content {
   height: 100%;
 }
 
+/*Left side styles*/
+
 .left-container {
   width: 25%;
   height: 100%;
@@ -101,11 +103,35 @@ html, body, #content {
   font-weight: bold;
 }
 
+/*Right side styles*/
+
 .right-container {
   width: 75%;
   height: 100%;
   background-color: #F5F5F5;
   display: inline-block;
   float: right;
+  overflow: auto;
+}
+
+.right-container-header {
+  height: 60px;
+}
+
+.right-container-header-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: #6B909A;
+  line-height: 60px;
+  margin-left: 20px;
+}
+
+.right-container-content-block {
+  width: 96%;
+  height: 400px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 }
 

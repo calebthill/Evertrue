@@ -58,7 +58,21 @@ var MainApp = React.createClass({
           </div>
         </div>
         <div className='right-container'>
+          <div className='right-container-header'>
+            <p className='right-container-header-text'>General Info</p>
+          </div>
 
+          <div className='right-container-content-block'>
+            
+          </div>
+
+          <div className='right-container-content-block'>
+            
+          </div>
+
+          <div className='right-container-content-block'>
+            
+          </div>
         </div>
       </div>
     );
