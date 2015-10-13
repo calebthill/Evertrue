@@ -1,5 +1,7 @@
 var React = require('react');
 var LeftNavigation = require('./left_navigation')
+var PageTemplate = require('./page_template')
+
 require('../../schema.js');
 
 var MainApp = React.createClass({
@@ -15,10 +17,14 @@ var MainApp = React.createClass({
     this.setState({
       jsonData: window.data
     })
-    $(".expanded-tab-text").hide();
   },
 
-  render: function(){
+  render: function() {
+    var jsonData = this.state.jsonData;
+    var currentPage = this.state.currentPage;
+    
+    pageData = this._getPageData(jsonData, currentPage)
+
     return (
       <div className='container'>
         <LeftNavigation 
@@ -28,17 +34,31 @@ var MainApp = React.createClass({
         />
 
         <div className='right-container'>
-          
+          <PageTemplate 
+            data={pageData}
+          />
         </div>
       </div>
     );
   },
 
   _setCurrentPage: function(currentPage) {
-    console.log("setting current page to: " + currentPage)
     this.setState({
       currentPage: currentPage
     });
+  },
+
+  _getPageData: function(data, currentPage) {
+    var pageData;
+    $.each(data, function(index, value) {
+      if (value.containing_object !== undefined) {
+        if (value.containing_object.name === currentPage) {
+          pageData = value.containing_object
+          return pageData
+        }
+      }
+    });
+    return pageData
   }
 });
 
