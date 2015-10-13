@@ -1,82 +1,72 @@
-var React = require('react')
+var React = require('react');
+var LeftNavigation = require('./left_navigation')
+require('../../schema.js');
 
 var MainApp = React.createClass({
+
+  getInitialState: function() {
+    return {
+      jsonData: {}
+    }
+  },
+
+  componentDidMount: function() {
+    this.setState({
+      jsonData: window.data
+    })
+    $(".expanded-tab-text").hide();
+  },
 
   render: function(){
     return (
       <div className='container'>
-        <div className='left-container'>
-          <div className='left-container-content'>
-            <div className='left-container-header'>
-              <p className='left-container-header-text'>FIELD GROUPS</p>
-            </div>
-            <div className='left-container-content-tab-expanded'>
-              <p className="left-container-content-tab-text-expanded">General Info</p>
+        <LeftNavigation 
+          data={this.state.jsonData}
+          currentPage={this.state.currentPage}
+        />
 
-              <div className='left-container-content-tab-expanded-tab'>
-                <p className="expanded-tab-text">Unique Record ID</p>
-              </div>
-
-              <div className='left-container-content-tab-expanded-tab'>
-                <p className="expanded-tab-text">Roles</p>
-              </div>
-
-              <div className='left-container-content-tab-expanded-tab'>
-                <p className="expanded-tab-text">Prefix</p>
-              </div>
-
-              <div className='left-container-content-tab-expanded-tab'>
-                <p className="expanded-tab-text">First Name</p>
-              </div>
-
-            </div>
-            <div className='left-container-content-tab'>
-              <p className="left-container-content-tab-text">Address</p>
-            </div>
-            <div className='left-container-content-tab'>
-              <p className="left-container-content-tab-text">Email</p>
-            </div>
-            <div className='left-container-content-tab'>
-              <p className="left-container-content-tab-text">Education</p>
-            </div>
-            <div className='left-container-content-tab'>
-              <p className="left-container-content-tab-text">Phone</p>
-            </div>
-            <div className='left-container-content-tab'>
-              <p className="left-container-content-tab-text">Work</p>
-            </div>
-            <div className='left-container-content-tab'>
-              <p className="left-container-content-tab-text">Giving</p>
-            </div>
-            <div className='left-container-content-tab'>
-              <p className="left-container-content-tab-text">Custom</p>
-            </div>
-            
-          </div>
-          <div className='left-container-footer'>
-            <p className='left-container-footer-text'>EverTrue</p>
-          </div>
-        </div>
         <div className='right-container'>
           <div className='right-container-header'>
             <p className='right-container-header-text'>General Info</p>
           </div>
 
           <div className='right-container-content-block'>
-            
+            <div className='right-content-block-header'>
+              <p className='right-content-block-header-text'>Unique Record ID</p>
+            </div>
+            <div className='right-content-block-details-container'>
+              <div className='details-container-left'>
+                <p className='details-container-text'> KEY</p>
+              </div>
+
+              <div className='details-container-right'>
+                <p className='details-container-text'> KEY</p>
+              </div>
+            </div>
           </div>
 
           <div className='right-container-content-block'>
-            
-          </div>
+            <div className='right-content-block-header'>
+              <p className='right-content-block-header-text'>Unique Record ID</p>
+            </div>
+            <div className='right-content-block-details-container'>
+              <div className='details-container-left'>
+                <p className='details-container-text'> KEY</p>
+                <p className='details-container-text'> KEY</p>
+                <p className='details-container-text'> KEY</p>
+              </div>
 
-          <div className='right-container-content-block'>
-            
+              <div className='details-container-right'>
+                <p className='details-container-text'> There are suprisingly few attributes that are specific to tables. Of course you can use class and ID and all the typical global attributes. There used to be quite a few, but most of them were specific to styling and thus deprecated (as that is CSS's job).</p>
+                <p className='details-container-text'> KEY</p>
+                <p className='details-container-text'> KEY</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     );
-  },
+  }
 });
 
 module.exports = MainApp;

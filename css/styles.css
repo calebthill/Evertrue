@@ -34,6 +34,7 @@ html, body, #content {
   border: 1px solid #EBECED;
   border-radius: 6px;
   background-color: white;
+  overflow: auto;
 }
 
 .left-container-header {
@@ -49,7 +50,7 @@ html, body, #content {
 }
 
 .left-container-content-tab {
-  height: 40px;
+  height: auto;
   border-bottom: 1px solid #EBECED;
 }
 
@@ -128,10 +129,58 @@ html, body, #content {
 
 .right-container-content-block {
   width: 96%;
-  height: 400px;
+  height: auto;
   background-color: white;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 4px;
 }
+
+.right-content-block-header {
+  height: 70px;
+}
+
+.right-content-block-header-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #6B909A;
+  line-height: 70px;
+  margin-left: 20px;
+}
+
+.right-content-block-details-container {
+  width: 93%;
+  height: auto;
+  background-color: #F2F6F7;
+  border: 2px solid #EBECED;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.details-container-left {
+  display: inline-block;
+  float: left;
+  width: 30%;
+}
+
+
+.details-container-right {
+  display: inline-block;
+  float: right;
+  width: 70%;
+  background-color: white;
+}
+
+.details-container-text {
+  color: #6B909A;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
 
