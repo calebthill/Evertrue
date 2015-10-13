@@ -21,7 +21,7 @@ var MainApp = React.createClass({
 
   render: function() {
     var currentPage = this.state.currentPage;
-    var pageData = this._getPageData(window.data, currentPage)
+    var pageData = this._getPageData(window.data, currentPage);
 
     return (
       <div className='container'>
@@ -31,11 +31,9 @@ var MainApp = React.createClass({
           setCurrentPage={this._setCurrentPage}
         />
 
-        <div className='right-container'>
-          <PageTemplate 
-            data={pageData}
-          />
-        </div>
+        <PageTemplate 
+          data={pageData}
+        />
       </div>
     );
   },
@@ -52,11 +50,11 @@ var MainApp = React.createClass({
       if (value.containing_object !== undefined) {
         if (value.containing_object.name === currentPage) {
           pageData = value.containing_object
-          return pageData
+          return pageData;
         }
       }
     });
-    return pageData
+    return pageData;
   }
 });
 
