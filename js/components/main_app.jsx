@@ -16,14 +16,12 @@ var MainApp = React.createClass({
   componentDidMount: function() {
     this.setState({
       jsonData: window.data
-    })
+    });
   },
 
   render: function() {
-    var jsonData = this.state.jsonData;
     var currentPage = this.state.currentPage;
-    
-    pageData = this._getPageData(jsonData, currentPage)
+    var pageData = this._getPageData(window.data, currentPage)
 
     return (
       <div className='container'>
