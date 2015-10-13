@@ -60,6 +60,9 @@ html, body, #content {
   font-weight: bold;
   font-size: 14px;
   margin-left: 17px;
+  /* Handle multiple browsers */
+  cursor: pointer; 
+  cursor: hand;
 }
 
 .left-container-content-tab-expanded {

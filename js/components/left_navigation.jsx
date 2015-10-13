@@ -37,10 +37,10 @@ var LeftNavigation = React.createClass({
 
   _navigationRowTemplate: function(containingObject, index) {
 
-    console.log(containingObject)
+    // console.log(containingObject)
 
     return (
-      <div className='left-container-content-tab' key={index}>
+      <div className='left-container-content-tab' onClick={this.props.setCurrentPage.bind(null, containingObject.name)} key={index}>
         <p className="left-container-content-tab-text">{ containingObject.name }</p>
         <SubNavigation 
           properties={containingObject.properties}
